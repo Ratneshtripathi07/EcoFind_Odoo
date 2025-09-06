@@ -21,14 +21,14 @@ export default function CartPage() {
   const handleCheckout = () => {
     toast({
       title: 'Checkout is not implemented',
-      description: 'This is a mock checkout process.',
+      description: 'Checkout functionality will be available soon.',
     });
   };
 
   if (!isClient) {
     return null; // Or a loading spinner
   }
-  
+
   const totalItems = getItemCount();
   const totalPrice = getTotalPrice();
 
@@ -37,7 +37,7 @@ export default function CartPage() {
       <h1 className="mb-8 font-headline text-3xl font-bold">Your Cart</h1>
       {items.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-border py-24 text-center">
-            <ShoppingCart className="h-16 w-16 text-muted-foreground" />
+          <ShoppingCart className="h-16 w-16 text-muted-foreground" />
           <h2 className="mt-6 text-xl font-semibold">Your cart is empty</h2>
           <p className="mt-2 text-muted-foreground">Looks like you haven&apos;t added anything to your cart yet.</p>
           <Button asChild className="mt-6">
@@ -66,7 +66,7 @@ export default function CartPage() {
                             <Minus className="h-3 w-3" />
                           </Button>
                           <span className="w-6 text-center text-sm">{item.quantity}</span>
-                           <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => increaseQuantity(item.id)}>
+                          <Button variant="outline" size="icon" className="h-6 w-6" onClick={() => increaseQuantity(item.id)}>
                             <Plus className="h-3 w-3" />
                           </Button>
                         </div>

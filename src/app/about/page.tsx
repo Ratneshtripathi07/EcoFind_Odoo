@@ -14,11 +14,10 @@ export default function AboutPage() {
 
       <div className="relative mb-16 h-80 w-full overflow-hidden rounded-lg shadow-lg">
         <Image
-          src="https://picsum.photos/1200/400?random=2"
+          src="/about/team-photo.jpg"
           alt="Team working together in a green office"
           layout="fill"
           objectFit="cover"
-          data-ai-hint="team collaboration"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <h2 className="absolute bottom-6 left-6 font-headline text-3xl font-bold text-white">

@@ -97,7 +97,7 @@ export default function ContactPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@example.com"
+                    placeholder="your.email@domain.com"
                     required
                   />
                 </div>

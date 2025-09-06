@@ -19,8 +19,8 @@ import Link from 'next/link';
 import { Eye, EyeOff } from 'lucide-react';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('greenthumb@example.com');
-  const [password, setPassword] = useState('password123'); // Mock password
+  const [email, setEmail] = useState('sarah.green@gmail.com');
+  const [password, setPassword] = useState('mypassword');
   const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const router = useRouter();
@@ -54,7 +54,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="your.email@domain.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
