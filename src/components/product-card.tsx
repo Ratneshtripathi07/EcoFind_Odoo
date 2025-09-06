@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               alt={product.title}
               width={400}
               height={300}
-              data-ai-hint={`${product.category.toLowerCase()} product`}
+
               className="h-full w-full object-cover"
             />
           </div>

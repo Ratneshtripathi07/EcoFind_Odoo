@@ -42,26 +42,26 @@ export default function RegisterPage() {
       });
       return;
     }
-    
+
     if (users.some(u => u.email === email)) {
-        toast({
-            title: 'Registration Failed',
-            description: 'An account with this email already exists.',
-            variant: 'destructive',
-        });
-        return;
+      toast({
+        title: 'Registration Failed',
+        description: 'An account with this email already exists.',
+        variant: 'destructive',
+      });
+      return;
     }
 
     setPasswordError(false);
-    
+
     const newUser = {
       id: `user-${Date.now()}`,
       username,
       email,
-      avatar: `https://picsum.photos/seed/${username}/100/100`,
+      avatar: `/avatars/default-${Math.floor(Math.random() * 5) + 1}.jpg`,
       bio: 'A new member of the EcoFind community!',
     };
-    
+
     addUser(newUser);
 
     toast({
@@ -103,7 +103,7 @@ export default function RegisterPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@example.com"
+                placeholder="your.email@domain.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -130,7 +130,7 @@ export default function RegisterPage() {
                 </button>
               </div>
             </div>
-             <div className="space-y-2">
+            <div className="space-y-2">
               <Label htmlFor="confirm-password">Confirm Password</Label>
               <div className="relative">
                 <Input
